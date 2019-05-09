@@ -28,5 +28,18 @@ try {
 * 1.是否需要定义成Checked Exception, 因为类型设计的初衷更是为了从异常情况恢复，作为异常设计者，我们往往有充足信息进行分类
 * 2.在保证诊断信息充足的同时，也要考虑避免包含敏感信息，因为那样可能会导致潜在的安全问题
 
+## String && StringBuffer && StringBuilder
+### String
+* Immutable类，被声明为final class, value属性也是final.
+* String str0 = "123" ->通过直接赋值方式，放入字符串常量池
+  String str1 = new String("123") ->不会放入字符串常量池
+* intern() 方法
+* Java 9中，存储方式由char数组变为byte数组加上一个标识编码的所谓coder
+
+### StringBuffer && StringBuilder
+* 二者都继承了AbstractStringBuilder，区别在于最终的方法是否加了sychronized,初始长度均为16
+
+
+
 
 
