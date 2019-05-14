@@ -40,6 +40,9 @@ try {
 * 二者都继承了AbstractStringBuilder，区别在于最终的方法是否加了sychronized,初始长度均为16
 
 
-
+## List(ArrayList、LinkedList)
+集合框架蓝图
+![集合框架](https://github.com/sgzilv/javaLearning/blob/master/img/List.png)
+ArrayList: 非线性安全的动态数组，数组扩容（50%）时，会调用底层System.arrayCopy()方法进行大量的数组复制操作。在查找元素时要遍历数组，对于非null的元素采用equal的方法寻找。
 
 
